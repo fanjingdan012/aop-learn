@@ -3,11 +3,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.fjd</groupId>
-    <artifactId>aop-aspectj</artifactId>
+    <artifactId>aop-aspectj-actw</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>aop-aspectj</name>
+    <name>aop-aspectj-actw</name>
     <url>http://maven.apache.org</url>
 
     <properties>

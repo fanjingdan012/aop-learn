@@ -2,7 +2,6 @@ import java.io.IOException;
 aspect AppAspect {
     void around():call(void App.sayHello()){
         System.out.println("before transaction....");
-		new IOException().printStackTrace();
         proceed();
         System.out.println("after transaction....");
     }
