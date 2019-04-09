@@ -8,12 +8,12 @@ import org.aspectj.lang.annotation.Pointcut;
 @Aspect  
 public class Monitor {  
   
-    @Pointcut("execution(* quickstart.service.impl.*.*(..))")  
+    @Pointcut("execution(* con.fjd.SecuredMethod.*(..))")
     public void anyService(){}  
   
       
-    @Before("quickstart.aspectj.Monitor.anyService()")  
+    @Before("anyService()")
     public void log(JoinPoint joinPoint){  
-        System.out.println("Service Method " + joinPoint.getSignature().getName() + " Invocation!");  
+        System.out.println("before Service Method " + joinPoint.getSignature().getName() + " Invocation!");
     }  
 }  

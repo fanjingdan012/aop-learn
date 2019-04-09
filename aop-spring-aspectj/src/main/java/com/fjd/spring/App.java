@@ -15,8 +15,9 @@ import java.io.IOException;
 //Transaction
 @Service("sampleService")
 class AppService {
-    public void doBusiness() {
+    public void doBusiness() throws  Exception{
         System.out.println("do business");
+        throw new IOException();
     }
 }
 
@@ -62,6 +63,11 @@ class AppAspect {
     @AdviceName("pointcutBefore")
     public void pointcutBefore(JoinPoint joinPoint) {
         System.out.println("==pointcut before " + joinPoint.getSignature());
+    }
+
+    @AfterThrowing(pointcut="execution(void *.doBusiness())",throwing = "ex")
+    public void doRecoveryActions(JoinPoint joinPoint, Throwable ex) {
+        System.out.println("==pointcut in exception " + joinPoint.getSignature());
     }
 
 

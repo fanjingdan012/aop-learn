@@ -5,6 +5,6 @@
     </aspects>
     <weaver
             options="-showWeaveInfo -XmessageHandlerClass:org.springframework.aop.aspectj.AspectJWeaverMessageHandler">
-        <include within="com.fjd.service..*" />
+        <include within="com.fjd..*" />
     </weaver>
 </aspectj>
